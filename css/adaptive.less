@@ -1,0 +1,93 @@
+@media screen and (max-width: 1250px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .info .info-container {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .address, .phone {
+      margin: 10px 80px;
+    }
+
+    .name-company {
+      order: 3;
+      padding: 25px 0;
+    }
+
+    .lang {
+      order: 4;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .info .info-container .address, .info .info-container .phone {
+    margin: 10px 40px;
+  }
+  header .header-container .header-search{
+    margin-left: 15px;
+  }
+}
+@media screen and (max-width: 620px) {
+  header .header-container .header-items{
+    display: none;
+  }
+  #burger{
+    display: block;
+    color: white;
+    font-size: 32px;
+  }
+  #items{
+    display: none;
+  }
+  #items.open{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.75);
+    text-align: center;
+    justify-content: space-evenly;
+    z-index: 1;
+    #close{
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .info .info-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .name-company{
+      order: 1;
+    }
+    .address{
+      order: 2;
+    }
+    .phone{
+      order: 3;
+    }
+  }
+  .main .main-container .main-border .main-title{
+    font-size: 50px;
+  }
+  .discount .discount-container{
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}

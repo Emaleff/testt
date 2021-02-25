@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="css/main.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/adaptive.less"/>
+    <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+</head>
+<body>
+<header>
+    <div class="header-container container">
+        <div id="burger">&#9776;</div>
+        <div class="header-items" id="items">
+            <svg id="close" height="365.696pt" viewBox="0 0 365.696 365.696" width="365.696pt" xmlns="http://www.w3.org/2000/svg">
+                <path d="m243.1875 182.859375 113.132812-113.132813c12.5-12.5 12.5-32.765624 0-45.246093l-15.082031-15.082031c-12.503906-12.503907-32.769531-12.503907-45.25 0l-113.128906 113.128906-113.132813-113.152344c-12.5-12.5-32.765624-12.5-45.246093 0l-15.105469 15.082031c-12.5 12.503907-12.5 32.769531 0 45.25l113.152344 113.152344-113.128906 113.128906c-12.503907 12.503907-12.503907 32.769531 0 45.25l15.082031 15.082031c12.5 12.5 32.765625 12.5 45.246093 0l113.132813-113.132812 113.128906 113.132812c12.503907 12.5 32.769531 12.5 45.25 0l15.082031-15.082031c12.5-12.503906 12.5-32.769531 0-45.25zm0 0"/>
+            </svg>
+            <a href="#" class="header-item"> О компании</a>
+            <a href="#" class="header-item">Акции и скидки</a>
+            <a href="#" class="header-item">Блог</a>
+        </div>
+        <div class="header-search">
+            <img src="images/search.png" class="header-search-img" alt="">
+            <input type="text" class="header-input-search" placeholder="Поиск">
+        </div>
+    </div>
+</header>
+<section class="info">
+    <div class="container info-container">
+        <div class="name-company">
+            НАЗВАНИЕ КОМПАНИИ
+        </div>
+        <div class="address">
+            <img src="images/map.png" alt="">
+            <div class="address-text">
+                г. Орёл, <br>
+                ул. Ленина 1
+            </div>
+        </div>
+        <div class="phone">
+            <img src="images/call.png" alt="">
+            <div class="phone-text">
+                +7 (4862) 78-17-55
+                <a href="#">Обратная связь</a>
+            </div>
+        </div>
+        <div class="lang">
+            <div class="ru">
+                <img src="images/russia.png" alt="">
+                RU
+            </div>
+            <div class="en">
+                EN
+                <img src="images/united-kingdom.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main">
+    <div class="main-container container">
+        <div class="main-border">
+            <div class="main-title">
+                Большой Заголовок
+                акция только сегодня
+            </div>
+            <div class="main-big-text">
+                Большой текст об услуге
+            </div>
+            <div class="main-small-text">
+                Текст меньше
+            </div>
+            <button>Подробнее</button>
+        </div>
+    </div>
+</section>
+<section class="discount">
+    <div class="discount-container container">
+        <ul>акции и скидки
+            <li>Акция 1</li>
+            <li>Акция 2</li>
+            <li>Акция 3</li>
+        </ul>
+        <button class="btn">
+            <span>в каталог</span>
+            <div class="arrow">
+                <img src="images/arrow.png" alt="">
+            </div>
+        </button>
+    </div>
+</section>
+<script>
+    document.getElementById('burger').onclick = function () {
+        document.getElementById('items').classList.add('open');
+    };
+    document.querySelectorAll('#items > *').forEach((item) => {
+        item.onclick = () => {
+            document.getElementById('items').classList.remove('open');
+        }
+    })
+</script>
+</body>
+</html>
